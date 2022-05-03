@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  app: 
+    build: .
+    container_name: app
+    ports: 
+      - "3001:3000"
+    volumes:
+      - .:/home/node/app
+      #- /home/node/app/node_modules
+    # depends_on:
+    #   - db
+    
+  db:
+    build: .docker/postgres
+    container_name: db
+    restart: always
+    tty: true
+    ports: 
+      - "5432:5432"
+    volumes:
+      - .docker/dbdata:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=Lokinha7!
+      - POSTGRES_DB=cursonestjs
