@@ -10,6 +10,4 @@ RUN npm install
 
 COPY . .
 
-RUN npx typeorm migration:run
-
 CMD ["npm", "run", "start:dev"]

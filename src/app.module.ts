@@ -12,7 +12,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       host: 'db',
       port: 5432,
       username: 'postgres',
-      password: 'Lokinha7!',
+      password: 'docker',
       database: 'cursonestjs',
       entities: [__dirname + '/**/*.entity.js'],
       autoLoadEntities: false,

@@ -22,5 +22,5 @@ services:
     volumes:
       - .docker/dbdata:/var/lib/postgresql/data
     environment:
-      - POSTGRES_PASSWORD=Lokinha7!
+      - POSTGRES_PASSWORD=docker
       - POSTGRES_DB=cursonestjs
